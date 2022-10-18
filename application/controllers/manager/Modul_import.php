@@ -175,7 +175,7 @@ class Modul_import extends Member_Controller
 						$soal_id = $this->cbt_soal_model->save($question);
 						$jmlsoalsukses++;
 						/**
-						 * Jika tipe adalah Answer
+						 * Jika tipe adalah Answer as
 						 */
 					} else if ($kolom1 == 'A') {
 						$answer['jawaban_detail'] = $kolom2;
@@ -185,7 +185,7 @@ class Modul_import extends Member_Controller
 							$answer['jawaban_benar'] = '0';
 						}
 						$answer['jawaban_aktif'] = 1;
-						// $soal_id = $this->cbt_soal_model->save($answer);
+						$soal_id = $this->cbt_soal_model->save($answer);
 						$answer['jawaban_soal_id'] = $soal_id;
 
 						$this->cbt_jawaban_model->save($answer);
